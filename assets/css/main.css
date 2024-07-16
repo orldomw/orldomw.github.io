@@ -1,12 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
-/*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -111,7 +105,8 @@ input, select, textarea {
 
 /* Type */
 
-	html {
+	html 
+	{
 		font-size: 16pt;
 	}
 
@@ -139,7 +134,10 @@ input, select, textarea {
 
 		}
 
-	body, input, select, textarea {
+/* Changes font of body text */
+
+	body, input, select, textarea 
+	{
 		color: #ffffff;
 		font-family: "Source Sans Pro", sans-serif;
 		font-weight: 300;
@@ -147,12 +145,14 @@ input, select, textarea {
 		line-height: 1.65;
 	}
 
+
+	/* changes stuff with a tag in html aka. Hyperlinks */
 	a {
 		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+		border-bottom: dotted 1px rgb(255, 255, 255);
 		text-decoration: none;
 		color: inherit;
 	}
@@ -300,9 +300,15 @@ input, select, textarea {
 		text-align: right;
 	}
 
+
+
+
+
+
 /* Form */
 
-	form {
+	form 
+	{
 		margin: 0 0 2rem 0;
 	}
 
@@ -996,8 +1002,8 @@ input, select, textarea {
 				border-top: 0;
 			}
 
-/* Button */
-
+/* Formatting for Buttons ---- NOT CURRENTLY USED ON SITE  */ 
+/*
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -1103,14 +1109,14 @@ input, select, textarea {
 	button {
 		line-height: calc(2.75rem - 2px);
 	}
-
+*/
 /* BG */
 
 	#bg {
-		-moz-transform: scale(1.0);
-		-webkit-transform: scale(1.0);
+		-moz-transform: scale(1.0); /* BG scale on firefox browser */
+		-webkit-transform: scale(1.0); /* BG scale on safari browser */
 		-ms-transform: scale(1.0);
-		transform: scale(1.0);
+		transform: scale(1.0); /* BG scale on edge browser */
 		-webkit-backface-visibility: hidden;
 		position: fixed;
 		top: 0;
@@ -1134,18 +1140,15 @@ input, select, textarea {
 			-moz-transition: background-color 2.5s ease-in-out;
 			-webkit-transition: background-color 2.5s ease-in-out;
 			-ms-transition: background-color 2.5s ease-in-out;
-			transition: background-color 2.5s ease-in-out;
-			-moz-transition-delay: 0.75s;
+			transition: background-color .5s ease-in-out; /* Transition speed (browser = edge) */
+			-moz-transition-delay: 0.75s; /* Delay before transition begins */
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto,
- 256px 256px;
-			background-position: center,
- center;
-			background-repeat: no-repeat,
- repeat;
+			background-image: linear-gradient(to top, rgba(2, 16, 44, 0.357), rgba(136, 2, 253, 0.3)), url("../../images/overlay.png");
+			background-size: auto, 256px 256px;
+			background-position: center, center;
+			background-repeat: no-repeat, repeat;
 			z-index: 2;
 		}
 
@@ -1261,6 +1264,7 @@ input, select, textarea {
 		max-width: 100%;
 		text-align: center;
 	}
+	
 
 		#header > * {
 			-moz-transition: opacity 0.325s ease-in-out;
@@ -1302,6 +1306,8 @@ input, select, textarea {
 				font-size: 2rem;
 			}
 		*/
+
+		/* Lines at the header/title */
 		#header .content {
 			border-style: solid;
 			border-color: #ffffff;
@@ -1309,6 +1315,8 @@ input, select, textarea {
 			border-bottom-width: 1px;
 			max-width: 100%;
 		}
+
+		/* Animation for the header */
 
 			#header .content .inner {
 				-moz-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
@@ -1322,7 +1330,7 @@ input, select, textarea {
 				padding: 3rem 2rem;
 				max-height: 40rem;
 				overflow: hidden;
-			}
+			} 
 
 				#header .content .inner > :last-child {
 					margin-bottom: 0;
@@ -1501,6 +1509,8 @@ input, select, textarea {
 
 		}
 
+
+		
 /* Main */
 
 	#main {
@@ -1645,7 +1655,7 @@ input, select, textarea {
 		}
 
 		body.is-article-visible #footer {
-			-moz-transform: scale(0.95);
+			-moz-transform: scale(0.95); 
 			-webkit-transform: scale(0.95);
 			-ms-transform: scale(0.95);
 			transform: scale(0.95);
